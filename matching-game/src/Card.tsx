@@ -1,4 +1,5 @@
 import { useCallback } from "react";
+import './Card.css';
 
 export interface CardProps {
     isFaceShown: boolean;
