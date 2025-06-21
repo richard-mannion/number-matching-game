@@ -1,0 +1,81 @@
+.App {
+  --standard-spacing: 0.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--standard-spacing);
+  background-color: #e7e6e6;
+  min-height: 100vh;
+
+}
+
+.game-controls {
+  display: flex;
+  gap: var(--standard-spacing);
+  background-color: white;
+  width: 100%;
+  box-shadow: 0 4px 10px -3px rgba(0, 0, 0, .05);
+  border-bottom: 1px solid #bfbfbf;
+  justify-content: center;
+  padding: var(--standard-spacing);
+}
+
+.moves {
+  border-right: 1px solid #e7e6e6;
+  padding-right: var(--standard-spacing)
+}
+
+.card-holder {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.card {
+  border: 0.5rem solid white;
+  border-radius: 0.5rem;
+  height: 15rem;
+  min-width: 9rem;
+  cursor: pointer;
+  display: flex;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .04);
+}
+
+.card--back-shown {
+  background-image: url('card-back.svg');
+  background-size: contain;
+  background-position: center;
+}
+
+.card--front-shown {
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  border-color: #003366;
+}
+
+.game-over-dialog {
+ 
+  border-radius: 8px;
+  max-width: 500px;
+  border: 2px solid #BBB;
+}
+
+.game-over-content {
+  
+  background: #fff;
+   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.game-over-dialog h2 {
+  margin: 0;
+}
+.game-over-dialog button{
+  width: fit-content;
+}
