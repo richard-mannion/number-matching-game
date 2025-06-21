@@ -1,6 +1,6 @@
 import React, { useCallback, useRef } from 'react';
 import './App.css';
-import Card from './Card';
+import Card from '../card/Card';
 
 import { startNewGame, GameState, flipUnmatchedCards, revealCard } from 'game-engine/dist';
 
@@ -49,7 +49,7 @@ function App() {
       <div className="game-controls">
         <span className="moves">Moves: {gameState.movesToWin}</span>
 
-        <input type="number" min="2" max="10" value={highestCardNumber} onChange={handleHighestCardNumberChange} />
+        <span><label htmlFor="highestCardNumber" className="highestCardNumberLabel">Highest Card Number:</label><input type="number" min="2" max="10" id="highestCardNumber" value={highestCardNumber} onChange={handleHighestCardNumberChange} /></span>
         <button onClick={handleNewGame} >New Game</button>
       </div>
       <div className="card-holder">
