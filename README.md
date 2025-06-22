@@ -1,9 +1,26 @@
 # Number Matching Game
 
-# Linux
+# Environment Setup
 
-## Simple Start
-Navigate to the repository root and runn the following to build and ad the prerequisites:
+To run this game, you will need to have the lts version of node.js and npm installed on your system.  The easiest way to do this is to install it via NVM.  This will also allow you to swap back to your original version of node if you have a different version for your other projects
+
+1. Install NVM
+2. Install the lts version of node
+
+## Download Instructions
+
+| Operating System | URL |
+| -- | -- |
+| Linux | https://github.com/nvm-sh/nvm |
+| Windows | https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows |
+
+
+# Running the Game
+
+## Linux
+
+### Simple Start
+Navigate to the repository root and run the following to build and add the prerequisites:
 
 `./prepare-application.sh`
 
@@ -17,7 +34,7 @@ Please note that for ease of development, this project used `npm link` which mea
 
 `./cleanu-up.sh`
 
-## Starting Manually
+### Starting Manually
 
 1. Navigate to the game engine folder
 2. Install the npm packages
@@ -39,7 +56,7 @@ npm link game-engine
 npm run start
 ```
 
-### Cleanup
+#### Cleanup
 
 if you wish to clean up manually, you will need to run the following in each project folder after completion
 
