@@ -1,0 +1,1 @@
+(cd matching-game && npm run start)
