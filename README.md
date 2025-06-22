@@ -58,6 +58,58 @@ npm run start
 
 #### Cleanup
 
-if you wish to clean up manually, you will need to run the following in each project folder after completion
+If you wish to clean up manually, you will need to run npm unlink in each project folder after completion and remove rhe link from the global npm repository
 
-`npm unlink game-engine`
+```PowerShell
+npm unlink game-engine
+npm rm --global game-engine
+```
+
+## Windows
+
+### Simple Start
+Navigate to the repository root and run the following to build and add the prerequisites:
+
+`.\prepare-application.ps1`
+
+Then to start the application run:
+
+`.\start.ps1`
+
+A web page will open in your default browser and you can play the game.
+
+Please note that for ease of development, this project used `npm link` which means that you will idealy clean up the symlinks afterwards by running:
+
+`.\cleanu-up.sh`
+
+### Starting Manually
+
+1. Navigate to the game engine folder
+2. Install the npm packages
+3. Build it
+4. Define a symlink.  
+5. Navigate to the website folder
+6. Install the npm packages
+7. Set up the symlink to the game-engine project
+8. Start the game 
+
+```PowerShell
+cd game-engine
+npm install
+npm run build
+npm link
+cd ../matching-game 
+npm install 
+npm link game-engine
+npm run start
+```
+
+#### Cleanup
+
+If you wish to clean up manually, you will need to run npm unlink in each project folder after completion and remove rhe link from the global npm repository
+
+
+```PowerShell
+npm unlink game-engine
+npm rm --global game-engine
+```
