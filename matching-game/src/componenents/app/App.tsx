@@ -16,7 +16,7 @@ function App() {
     setTimeout(() => {
       if (gameState.isFlipUnmatchedRequired) {
         flipUnmatchedCards(gameState);
-        setGameState({ ...gameState });
+        //setGameState({ ...gameState });
       }
       if (gameState.isGameOver) {
         openModal();
@@ -31,7 +31,7 @@ function App() {
 
   const handleNewGame = useCallback(() => {
     const newGameState = startNewGame(highestCardNumber);
-    setGameState(newGameState);
+    //setGameState(newGameState);
     closeModal();
   }, [highestCardNumber]);
 
